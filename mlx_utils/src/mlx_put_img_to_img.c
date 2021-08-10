@@ -6,13 +6,13 @@
 /*   By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 19:29:14 by bledda            #+#    #+#             */
-/*   Updated: 2021/08/10 21:09:06 by bledda           ###   ########.fr       */
+/*   Updated: 2021/08/10 21:22:41 by bledda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/mlx_put_img_to_img.h"
 
-static void	ft_put_pixel_img(t_data *data, int x, int y, int color)
+static void	ft_put_pixel_img(t_data_img *data, int x, int y, int color)
 {
 	char	*dst;
 
@@ -21,7 +21,7 @@ static void	ft_put_pixel_img(t_data *data, int x, int y, int color)
 		*(unsigned int *)dst = color;
 }
 
-static unsigned int	ft_get_pixel_img(t_data *data, int x, int y)
+static unsigned int	ft_get_pixel_img(t_data_img *data, int x, int y)
 {
 	return (*(unsigned int *)(data->addr
 		+ (y * data->line_length + x * (data->bits_per_pixel / 8))));

@@ -6,7 +6,7 @@
 /*   By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 19:32:01 by bledda            #+#    #+#             */
-/*   Updated: 2021/08/10 21:06:27 by bledda           ###   ########.fr       */
+/*   Updated: 2021/08/10 21:13:53 by bledda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MLX_PUT_IMG_TO_IMG_H
 
 # include <mlx.h>
+# include "mlx_keycode.h"
 
 typedef struct s_data_img
 {
