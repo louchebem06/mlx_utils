@@ -6,7 +6,7 @@
 /*   By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 19:29:14 by bledda            #+#    #+#             */
-/*   Updated: 2021/08/10 19:39:53 by bledda           ###   ########.fr       */
+/*   Updated: 2021/08/10 21:06:29 by bledda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static unsigned int	ft_pixel_get(t_data *data, int x, int y)
 		+ (y * data->line_length + x * (data->bits_per_pixel / 8))));
 }
 
-void	ft_put_image_to_image(t_img *dest, t_img *src, int x, int y)
+void	mlx_put_image_to_image(t_img *dest, t_img *src, int x, int y)
 {
 	t_data_img	img_src;
 	t_data_img	img_dst;

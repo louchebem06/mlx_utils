@@ -6,7 +6,7 @@
 /*   By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 19:32:01 by bledda            #+#    #+#             */
-/*   Updated: 2021/08/10 19:38:09 by bledda           ###   ########.fr       */
+/*   Updated: 2021/08/10 21:06:27 by bledda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ typedef struct s_img
 	int		width;
 	int		height;
 }	t_img;
+
+void	mlx_put_image_to_image(t_img *dest, t_img *src, int x, int y);
 
 #endif
