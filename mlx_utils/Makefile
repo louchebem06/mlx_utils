@@ -6,7 +6,7 @@
 #    By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/10 21:16:17 by bledda            #+#    #+#              #
-#    Updated: 2021/08/10 21:30:02 by bledda           ###   ########.fr        #
+#    Updated: 2021/08/10 21:33:29 by bledda           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,13 @@ endif
 ifeq ($(UNAME_S),Darwin)
 	LIBS 		= -lmlx -framework OpenGL -framework AppKit -lz
 endif
-#################################################################################
+################################################################################
 
 #	RULES	####################################################################
 $(NAME):	${OBJS}
 			@${AR} ${NAME} ${OBJS}
 			@printf $(yellow)
-			@printf "\ndone.\n"
+			@printf "\n$(NAME) done.\n"
 			@printf $(reset)
 
 all:		${NAME}
@@ -59,13 +59,13 @@ all:		${NAME}
 clean:
 			@${RM} $(OBJS)
 			@printf $(yellow)
-			@printf "Object files is delete\n"
+			@printf "$(NAME) -> objects is delete\n"
 			@printf $(reset)
 
 fclean:		clean
 			@$(RM) $(NAME)
 			@printf $(yellow)
-			@printf "mlx utils is delete\n"
+			@printf "$(NAME) is delete\n"
 			@printf $(reset)
 
 re:			fclean all
