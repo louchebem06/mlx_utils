@@ -6,13 +6,13 @@
 /*   By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 19:29:14 by bledda            #+#    #+#             */
-/*   Updated: 2021/08/10 21:06:29 by bledda           ###   ########.fr       */
+/*   Updated: 2021/08/10 21:09:06 by bledda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx_put_img_to_img.h"
+#include "../header/mlx_put_img_to_img.h"
 
-static void	ft_pixel_put(t_data *data, int x, int y, int color)
+static void	ft_put_pixel_img(t_data *data, int x, int y, int color)
 {
 	char	*dst;
 
@@ -21,7 +21,7 @@ static void	ft_pixel_put(t_data *data, int x, int y, int color)
 		*(unsigned int *)dst = color;
 }
 
-static unsigned int	ft_pixel_get(t_data *data, int x, int y)
+static unsigned int	ft_get_pixel_img(t_data *data, int x, int y)
 {
 	return (*(unsigned int *)(data->addr
 		+ (y * data->line_length + x * (data->bits_per_pixel / 8))));
@@ -45,8 +45,8 @@ void	mlx_put_image_to_image(t_img *dest, t_img *src, int x, int y)
 		current_x = 0;
 		while (current_x < src->width)
 		{
-			ft_pixel_put(&img_dst, current_x + x, current_y + y,
-				ft_pixel_get(&img_src, current_x, current_y));
+			ft_put_pixel_img(&img_dst, current_x + x, current_y + y,
+				ft_get_pixel_img(&img_src, current_x, current_y));
 			current_x++;
 		}
 		current_y++;
