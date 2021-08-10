@@ -6,7 +6,7 @@
 #    By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/10 21:16:17 by bledda            #+#    #+#              #
-#    Updated: 2021/08/10 21:33:29 by bledda           ###   ########.fr        #
+#    Updated: 2021/08/10 21:47:36 by bledda           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ all:		${NAME}
 
 %.o: %.c	$(HEADERS)
 			@printf $(yellow)
-			@printf "Generating mlx utils objects... $@\r"
+			@printf "Generating mlx utils objects... %-33.33s\r" $@
 			@$(CC) -c $(CFLAGS) -o $@ $<
 			@printf $(reset)
 
