@@ -6,7 +6,7 @@
 /*   By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 20:43:21 by bledda            #+#    #+#             */
-/*   Updated: 2021/08/10 21:00:12 by bledda           ###   ########.fr       */
+/*   Updated: 2021/08/11 13:28:13 by bledda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,54 +14,54 @@
 # define MLX_KEYCODE_H
 
 # ifdef __linux__
-#  define KEY_Q 0
-#  define KEY_W 0
-#  define KEY_E 0
-#  define KEY_R 0
-#  define KEY_T 0
-#  define KEY_Y 0
-#  define KEY_U 0
-#  define KEY_I 0
-#  define KEY_O 0
-#  define KEY_P 0
-#  define KEY_A 0
-#  define KEY_S 0
-#  define KEY_D 0
-#  define KEY_F 0
-#  define KEY_G 0
-#  define KEY_H 0
-#  define KEY_J 0
-#  define KEY_K 0
-#  define KEY_L 0
-#  define KEY_Z 0
-#  define KEY_X 0
-#  define KEY_C 0
-#  define KEY_V 0
-#  define KEY_B 0
-#  define KEY_N 0
-#  define KEY_M 0
-#  define KEY_ECHAP 0
-#  define KEY_ENTER 0
-#  define KEY_ARROW_LEFT 0
-#  define KEY_ARROW_RIGHT 0
-#  define KEY_ARROW_DOWN 0
-#  define KEY_ARROW_UP 0
-#  define KEY_DELETE 0
-#  define KEY_0 0
-#  define KEY_1 0
-#  define KEY_2 0
-#  define KEY_3 0
-#  define KEY_4 0
-#  define KEY_5 0
-#  define KEY_6 0
-#  define KEY_7 0
-#  define KEY_8 0
-#  define KEY_9 0
-#  define KEY_TAB 0
-#  define KEY_MAJ 0
-#  define KEY_SHFT 0
-#  define KEY_CTRL 0
-#  define KEY_SPACE 0
+#  define KEY_Q 113
+#  define KEY_W 119
+#  define KEY_E 101
+#  define KEY_R 114
+#  define KEY_T 116
+#  define KEY_Y 121
+#  define KEY_U 117
+#  define KEY_I 105
+#  define KEY_O 111
+#  define KEY_P 112
+#  define KEY_A 97
+#  define KEY_S 115
+#  define KEY_D 100
+#  define KEY_F 102
+#  define KEY_G 103
+#  define KEY_H 104
+#  define KEY_J 106
+#  define KEY_K 107
+#  define KEY_L 108
+#  define KEY_Z 122
+#  define KEY_X 120
+#  define KEY_C 99
+#  define KEY_V 118
+#  define KEY_B 98
+#  define KEY_N 110
+#  define KEY_M 109
+#  define KEY_ECHAP 65307
+#  define KEY_ENTER 65293
+#  define KEY_ARROW_LEFT 65361
+#  define KEY_ARROW_RIGHT 65363
+#  define KEY_ARROW_DOWN 65364
+#  define KEY_ARROW_UP 65362
+#  define KEY_DELETE 65288
+#  define KEY_0 48
+#  define KEY_1 49
+#  define KEY_2 50
+#  define KEY_3 51
+#  define KEY_4 52
+#  define KEY_5 53
+#  define KEY_6 54
+#  define KEY_7 55
+#  define KEY_8 56
+#  define KEY_9 57
+#  define KEY_TAB 65289
+#  define KEY_MAJ 65509
+#  define KEY_SHFT 65505
+#  define KEY_CTRL 65507
+#  define KEY_SPACE 32
 # elif __APPLE__
 #  define KEY_Q 12
 #  define KEY_W 13
