@@ -17,7 +17,7 @@ static void	ft_put_pixel_img(t_data_img *data, int x, int y, int color)
 	char	*dst;
 
 	dst = data->addr + y * data->line_length + x * (data->bits_per_pixel / 8);
-	if (color > 0)
+	if (color != 0xff000000)
 		*(unsigned int *)dst = color;
 }
 
