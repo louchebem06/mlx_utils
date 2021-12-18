@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   keycode_tester.c                                   :+:      :+:    :+:   */
+/*   mlx_generate_img.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bledda <bledda@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 20:52:30 by bledda            #+#    #+#             */
-/*   Updated: 2021/08/10 20:54:52 by bledda           ###   ########.fr       */
+/*   Created: 2021/12/18 17:59:16 by bledda            #+#    #+#             */
+/*   Updated: 2021/12/18 17:59:36 by bledda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <mlx.h>
-#include <stdio.h>
+#include "../header/mlx_utils.h"
 
-typedef struct s_vars
+void	mlx_generate_img(t_img *img, void *mlx_ptr, char *file)
 {
-	void	*mlx;
-	void	*win;
-}				t_vars;
-
-int	key_hook(int keycode, t_vars *vars)
-{
-	(void)vars;
-	printf("%d\n", keycode);
-	return (0);
-}
-
-int	main(void)
-{
-	t_vars	vars;
-
-	vars.mlx = mlx_init();
-	vars.win = mlx_new_window(vars.mlx, 200, 100, "Keycode Tester");
-	mlx_key_hook(vars.win, key_hook, &vars);
-	mlx_loop(vars.mlx);
+	img->img = mlx_xpm_file_to_image(mlx_ptr, file,
+			&img->width, &img->height);
+	if (!img->img)
+		printf("Error\n\t-Generate image:\n\t\t%s.", file);
+	create_img(img, img->img);
 }
