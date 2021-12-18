@@ -25,7 +25,7 @@ int	main(void)
 	}
 	win.win = mlx_new_window(win.mlx, 524 * 2, 524, "test lib");
 
-	// Generate img vierge
+	// Generate img clear
 	mlx_new_img(&screen, win.mlx, 524 * 2, 524);
 
 	// Generate Sprite img
