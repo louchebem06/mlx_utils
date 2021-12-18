@@ -38,7 +38,7 @@ int	main(void)
 	// Write Sprite IMG 1 on Screen
 	mlx_put_img_to_img(&screen, &sprite[1], 524, 0);
 
-	// Put screen on Windows
+	// Put screen on Window
 	mlx_put_image_to_window(win.mlx, win.win, screen.img, 0, 0);
 
 	mlx_loop(win.mlx);
