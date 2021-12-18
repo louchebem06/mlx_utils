@@ -1,4 +1,4 @@
-#Main test to minilibx_utils for minilibx
+# Main test to minilibx_utils for minilibx
 
 ```c
 #include <stdio.h>
